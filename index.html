@@ -5,45 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OKTO Technologies</title>
     <link rel="stylesheet" href="assets/css/okto.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/icons/android-chrome-192x192.png"
-      type="image/x-icon"
-    />
-
+    <link rel="shortcut icon" href="assets/icons/android-chrome-192x192.png" type="image/x-icon" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   </head>
 
   <body>
+    <!-- Barre du haut -->
     <div class="top-bar"></div>
 
+    <!-- Header / Navigation -->
     <header>
       <div class="logo">
         <span class="logo-ok">OK</span><span class="logo-to">TO</span>
         <small>TECHNOLOGIES</small>
       </div>
+      
       <!-- Bouton du menu burger -->
-      <button
-        class="burger"
-        id="burger"
-        aria-label="Ouvrir le menu"
-        aria-expanded="false"
-      >
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav>
+      
+      <nav id="main-nav">
         <a href="index.html" class="active">Accueil</a>
         <a href="about.html">À propos</a>
         <a href="services.html">Nos services</a>
-        <a href="">Notre équipe</a>
+        <a href="#">Notre équipe</a>
         <a href="actu.html">Infos et actus</a>
         <a href="contacts.html">Contact</a>
       </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
       <video autoplay muted loop playsinline>
         <source src="assets/images/oktovideo.mp4" type="video/mp4" />
@@ -61,10 +55,10 @@
       </div>
     </section>
 
-    <section class="services-section">
+    <!-- Section Services (avec effet reveal) -->
+    <section class="services-section reveal">
       <div class="chart-container">
         <div id="donut3d"></div>
-
         <div class="center-info">
           <div id="icon">🚀</div>
           <h3 id="service-name">Nos Services</h3>
@@ -72,133 +66,73 @@
           <p id="description">Découvrez nos domaines d'expertise.</p>
         </div>
       </div>
-
       <div class="services-content">
         <h2>
           <span class="logo-ok">NOS</span> <span class="logo-to">SERVICES</span>
         </h2>
-
         <p>
           Nous accompagnons les entreprises dans leur transformation digitale
           grâce à des solutions innovantes et adaptées à leurs besoins.
         </p>
-
         <button class="btn btn-start">Découvrir</button>
       </div>
     </section>
-    <section class="team-section">
+
+    <!-- Section Équipe (avec effet reveal) -->
+    <section class="team-section reveal">
       <div class="team-content">
         <h1 class="team-title">
           <span class="title-dark">NOTRE</span>
           <span class="title-accent">ÉQUIPE</span>
         </h1>
-
         <p class="team-text">
           Paragraphe. Cliquez ici pour ajouter votre propre texte. Utilisez cet
           espace pour relater votre parcours et présenter votre activité à vos
           visiteurs.
         </p>
-
         <button class="team-btn">Plus</button>
       </div>
-
       <div class="team-illustration">
         <div class="image-swap">
-          <img
-            class="img-blue"
-            src="assets/images/illustration-blue.png"
-            alt="Illustration isométrique d'un bureau avec deux personnages"
-          />
-          <img
-            class="img-color"
-            src="assets/images/illustration-color.png"
-            alt=""
-            aria-hidden="true"
-          />
+          <img class="img-blue" src="assets/images/illustration-blue.png" alt="Illustration isométrique d'un bureau avec deux personnages" />
+          <img class="img-color" src="assets/images/illustration-color.png" alt="" aria-hidden="true" />
         </div>
       </div>
     </section>
-    <section class="partners-section">
+
+    <!-- Section Partenaires (avec effet reveal) -->
+    <section class="partners-section reveal">
       <h2 class="partners-title">
         <span class="title-dark">NOS</span>
         <span class="title-accent">PARTENAIRES</span>
       </h2>
-
       <div class="partners-logos">
-        <img
-          src="assets/images/partners/Mali_AMRTP.png"
-          alt="amrtp_mali"
-          class="partner-logo"
-        />
-        <img
-          src="assets/images/partners/artcom.jpg"
-          alt="artcom"
-          class="partner-logo"
-        />
-        <img
-          src="assets/images/partners/eurovision.jpg"
-          alt="eurovision"
-          class="partner-logo"
-        />
-        <img
-          src="assets/images/partners/lagardere.jpg"
-          alt="lagardere"
-          class="partner-logo"
-        />
-
-        <img
-          src="assets/images/partners/france24.jpg"
-          alt="france24"
-          class="partner-logo partner-logo-extra"
-        />
-        <img
-          src="assets/images/partners/logo-gs2e.png"
-          alt="Gs2E"
-          class="partner-logo partner-logo-extra"
-        />
-        <img
-          src="assets/images/partners/iha.jpg"
-          alt="iha"
-          class="partner-logo partner-logo-extra"
-        />
-        <img
-          src="assets/images/partners/istc.jpg"
-          alt="istc"
-          class="partner-logo partner-logo-extra"
-        />
-        <img
-          src="assets/images/partners/rti.jpg"
-          alt="rti"
-          class="partner-logo partner-logo-extra"
-        />
-        <img
-          src="assets/images/partners/Artci.png"
-          alt="artci"
-          class="partner-logo partner-logo-extra"
-        />
-        <img
-          src="assets/images/partners/beinsports.jpg"
-          alt="beinsports"
-          class="partner-logo partner-logo-extra"
-        />
+        <img src="assets/images/partners/Mali_AMRTP.png" alt="amrtp_mali" class="partner-logo" />
+        <img src="assets/images/partners/artcom.jpg" alt="artcom" class="partner-logo" />
+        <img src="assets/images/partners/eurovision.jpg" alt="eurovision" class="partner-logo" />
+        <img src="assets/images/partners/lagardere.jpg" alt="lagardere" class="partner-logo" />
+        <img src="assets/images/partners/france24.jpg" alt="france24" class="partner-logo partner-logo-extra" />
+        <img src="assets/images/partners/logo-gs2e.png" alt="Gs2E" class="partner-logo partner-logo-extra" />
+        <img src="assets/images/partners/iha.jpg" alt="iha" class="partner-logo partner-logo-extra" />
+        <img src="assets/images/partners/istc.jpg" alt="istc" class="partner-logo partner-logo-extra" />
+        <img src="assets/images/partners/rti.jpg" alt="rti" class="partner-logo partner-logo-extra" />
+        <img src="assets/images/partners/Artci.png" alt="artci" class="partner-logo partner-logo-extra" />
+        <img src="assets/images/partners/beinsports.jpg" alt="beinsports" class="partner-logo partner-logo-extra" />
       </div>
-
       <button class="team-btn" id="partners-toggle-btn">Plus</button>
     </section>
-    <section class="projects-section">
+
+    <!-- Section Projets (avec effet reveal) -->
+    <section class="projects-section reveal">
       <h2 class="projects-title">
         <span class="title-dark">DERNIERS</span>
         <span class="title-accent">PROJETS</span>
       </h2>
-
-      <div
-        class="projects-grid"
-        data-latest-projects
-        data-link-target="article"
-        data-max-items="3"
-      ></div>
+      <div class="projects-grid" data-latest-projects data-link-target="article" data-max-items="3"></div>
     </section>
-    <section class="cta-section">
+
+    <!-- Section CTA (avec effet reveal) -->
+    <section class="cta-section reveal">
       <div class="cta-text">
         <h2 class="cta-title">Besoin de plus d'infos ? Contactez nous</h2>
         <p class="cta-subtitle">
@@ -208,6 +142,7 @@
       <a href="contact.html" class="btn btn-start cta-btn">Nous contacter</a>
     </section>
 
+    <!-- Footer -->
     <section class="site-footer">
       <div class="footer-columns">
         <div class="footer-col">
@@ -252,55 +187,80 @@
         <div class="footer-col">
           <h3 class="footer-title">Nous joindre</h3>
           <form class="footer-form">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              class="footer-input"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              class="footer-input"
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              class="footer-textarea"
-            ></textarea>
+            <input type="text" name="name" placeholder="Name" class="footer-input" />
+            <input type="email" name="email" placeholder="E-mail" class="footer-input" />
+            <textarea name="message" placeholder="Message" class="footer-textarea"></textarea>
             <button type="submit" class="footer-submit">Envoyer</button>
           </form>
         </div>
       </div>
 
       <div class="footer-bottom">
-        Tous les droits réservés &copy; <span id="footer-year"></span> - OKTO
-        Technologies.
+        Tous les droits réservés &copy; <span id="footer-year"></span> - OKTO Technologies.
       </div>
     </section>
 
     <!-- Bouton retour en haut -->
     <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="18 15 12 9 6 15" />
       </svg>
     </button>
-  </body>
 
-  <script src="assets/js/okto.js"></script>
-  <script src="assets/js/projects-data.js"></script>
-  <script src="assets/js/projects-render.js"></script>
-  <script src="assets/js/partenrs.js"></script>
-  <script src="assets/js/burger.js"></script>
+    <!-- Scripts JS externes -->
+    <script src="assets/js/okto.js"></script>
+    <script src="assets/js/projects-data.js"></script>
+    <script src="assets/js/projects-render.js"></script>
+    <script src="assets/js/partenrs.js"></script>
+    
+    <!-- Scripts internes (Burger, Scroll-top, Reveal) -->
+    <script>
+      // --- Gestion du Menu Burger ---
+      const burger = document.getElementById('burger');
+      const nav = document.getElementById('main-nav');
+      
+      burger.addEventListener('click', () => {
+        nav.classList.toggle('is-open');
+        burger.classList.toggle('is-open');
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('is-open');
+          burger.classList.remove('is-open');
+        });
+      });
+
+      // --- Gestion du Bouton Retour en haut ---
+      const scrollTopBtn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add('is-visible');
+        } else {
+          scrollTopBtn.classList.remove('is-visible');
+        }
+      });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // --- Effet Reveal (Apparition au scroll) ---
+      document.addEventListener('DOMContentLoaded', () => {
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        reveals.forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
 </html>

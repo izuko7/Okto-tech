@@ -7,15 +7,18 @@
     font-family: 'Inclusive Sans', sans-serif;
 }
 
-/* Barre du haut */
+/* ===== BARRE DU HAUT & HEADER ===== */
 .top-bar {
     height: 6px;
     background: linear-gradient(to right, #c2186e, #6a3fb5);
 }
 
-/* Header / navigation */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 15px 40px;
@@ -46,30 +49,86 @@ header {
     font-weight: 500;
 }
 
+/* ===== NAVIGATION AVEC EFFET ANIMÉ ===== */
 nav {
     display: flex;
     gap: 35px;
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
     font-weight: 600;
     font-size: 17px;
     color: #d9202c;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1a3fa0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #1a3fa0;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
 }
 
 nav a.active {
     color: #1a3fa0;
 }
 
-.avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #111;
+nav a.active::after {
+    transform: scaleX(1);
 }
 
-/* Hero */
+/* ===== BURGER MENU ===== */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: auto;
+}
+
+.burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #8B0000;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
     position: relative;
     height: 600px;
@@ -140,9 +199,14 @@ nav a.active {
 .btn-start {
     background: #c0476b;
     color: #fff;
+    transition: background 0.2s ease;
 }
 
-/* Section Nos services */
+.btn-start:hover {
+    background: #ab3a56;
+}
+
+/* ===== SECTION NOS SERVICES ===== */
 .services-section {
     display: flex;
     align-items: center;
@@ -233,7 +297,7 @@ nav a.active {
     color: #333;
 }
 
-/* ===== Section Notre Équipe ===== */
+/* ===== SECTION NOTRE ÉQUIPE ===== */
 .team-section {
     display: flex;
     align-items: center;
@@ -295,7 +359,6 @@ nav a.active {
     outline-offset: 3px;
 }
 
-/* Illustration avec effet couleur -> bleu au survol */
 .team-illustration {
     flex: 1 1 420px;
     max-width: 560px;
@@ -335,7 +398,7 @@ nav a.active {
     }
 }
 
-/* ===== Section Nos Partenaires ===== */
+/* ===== SECTION NOS PARTENAIRES ===== */
 .partners-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -348,15 +411,6 @@ nav a.active {
     font-weight: 800;
     letter-spacing: 3px;
     margin-bottom: 70px;
-}
-
-.partners-title .title-dark {
-    color: #8B0000;
-    margin-right: 14px;
-}
-
-.partners-title .title-accent {
-    color: #FF4040;
 }
 
 .partners-logos {
@@ -395,8 +449,13 @@ nav a.active {
 }
 
 @keyframes partner-fade-in {
-    from { opacity: 0; }
-    to   { opacity: 0.85; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.85;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -405,7 +464,7 @@ nav a.active {
     }
 }
 
-/* ===== Section Derniers Projets ===== */
+/* ===== SECTION DERNIERS PROJETS ===== */
 .projects-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -418,15 +477,6 @@ nav a.active {
     letter-spacing: 3px;
     text-align: center;
     margin-bottom: 60px;
-}
-
-.projects-title .title-dark {
-    color: #8B0000;
-    margin-right: 14px;
-}
-
-.projects-title .title-accent {
-    color: #FF4040;
 }
 
 .projects-grid {
@@ -520,7 +570,13 @@ nav a.active {
     cursor: pointer;
 }
 
-/* ===== Section Appel à l'action (Contact) ===== */
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* ===== SECTION APPEL À L'ACTION (CTA) ===== */
 .cta-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -549,7 +605,7 @@ nav a.active {
     white-space: nowrap;
 }
 
-/* ===== Footer ===== */
+/* ===== FOOTER ===== */
 .site-footer {
     background: #fdf1f1;
     color: #2b2d3a;
@@ -641,14 +697,40 @@ nav a.active {
     color: #6b6f80;
 }
 
-/* Lien englobant les cartes projets (accueil + page actu) */
-.project-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+/* ===== BOUTON RETOUR EN HAUT ===== */
+.scroll-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #8B0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+    z-index: 999;
 }
 
-/* ===== Page Article individuel ===== */
+.scroll-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    background: #e11414;
+}
+
+/* ===== PAGE ARTICLE INDIVIDUEL ===== */
 .article-section {
     max-width: 800px;
     margin: 0 auto;
@@ -707,4 +789,137 @@ nav a.active {
 .article-not-found h2 {
     color: #8B0000;
     margin-bottom: 12px;
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE & TABLETTES)
+========================================= */
+@media (max-width: 1024px) {
+    header {
+        padding: 16px 20px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        border-top: 1px solid #f3d9d9;
+        margin-top: 8px;
+    }
+
+    nav.is-open {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 14px 4px;
+        border-bottom: 1px solid #f3d9d9;
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .hero {
+        height: auto;
+        padding: 60px 20px 80px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero h1.tech {
+        font-size: 40px;
+    }
+
+    .hero .tagline {
+        font-size: 18px;
+    }
+
+    .hero .buttons {
+        position: static;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    .services-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .cta-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px 80px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 50px 20px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h1.tech {
+        font-size: 30px;
+    }
+
+    .hero .tagline {
+        font-size: 15px;
+    }
+
+    .partners-title,
+    .projects-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-section {
+        padding: 60px 20px;
+    }
+}
+
+/* =========================================
+   EFFET REVEAL (Apparition au scroll)
+========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Désactivation de l'effet si l'utilisateur préfère réduire les animations */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
