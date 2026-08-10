@@ -39,19 +39,37 @@
 
     <!-- ROADMAP DES SERVICES -->
     <section class="roadmap-section">
-      <div class="roadmap">
+
+      <div class="roadmap-intro">
+        <span class="roadmap-eyebrow">Nos pôles d'expertise</span>
+        <h2>Une organisation <span class="title-accent">au service de la performance</span></h2>
+        <p>Chaque pôle est conçu pour couvrir un maillon clé de la chaîne de valeur audiovisuelle et télécoms.</p>
+      </div>
+
+      <div class="roadmap" id="roadmap">
+
+        <!-- Route SVG dessinée en JS -->
+        <svg class="roadmap-road" id="roadmapRoad" preserveAspectRatio="none"></svg>
 
         <!-- ÉTAPE 01 -->
         <div class="roadmap-item">
           <div class="roadmap-marker">
-            <span class="roadmap-number">01</span>
-            <span class="roadmap-dot"></span>
+            <span class="roadmap-pin"></span>
           </div>
-          
+
           <!-- Carte -->
           <div class="department-card">
-            <span class="card-tag">Pôle Audiovisuel</span>
-            <h3>Broadcast & Ingénierie</h3>
+            <div class="card-header">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 11a9 9 0 0 1 9-9" /><path d="M4 4l16 16" /><circle cx="4" cy="20" r="1.5" /><path d="M4 15a5 5 0 0 1 5 5" />
+                </svg>
+              </div>
+              <div class="card-heading">
+                <span class="card-tag">Pôle Audiovisuel</span>
+                <h3>Broadcast & Ingénierie</h3>
+              </div>
+            </div>
             <p>OKTO Technologies s'est investie dans les activités Audiovisuelles. Référent en Côte d'Ivoire et en Afrique en matière de services occasionnels de retransmission en Direct.</p>
             <div class="sub-service">
               <h4>Broadcast</h4>
@@ -69,24 +87,35 @@
                 <li>Recettes, contrôle et audit des installations</li>
               </ul>
             </div>
+            <a href="#" class="card-more">
+              En savoir plus
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+            </a>
           </div>
 
-          <!-- Image Animée -->
           <div class="roadmap-visual">
-            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=500&auto=format&fit=crop" alt="Studio Broadcast" />
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=400&auto=format&fit=crop" alt="Studio Broadcast" loading="lazy" />
           </div>
         </div>
 
         <!-- ÉTAPE 02 -->
         <div class="roadmap-item">
           <div class="roadmap-marker">
-            <span class="roadmap-number">02</span>
-            <span class="roadmap-dot"></span>
+            <span class="roadmap-pin"></span>
           </div>
-          
+
           <div class="department-card">
-            <span class="card-tag">Pôle Télécoms</span>
-            <h3>Mesures Télécoms</h3>
+            <div class="card-header">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /><path d="M2 20h20" />
+                </svg>
+              </div>
+              <div class="card-heading">
+                <span class="card-tag">Pôle Télécoms</span>
+                <h3>Mesures Télécoms</h3>
+              </div>
+            </div>
             <p>Fort de son expertise développée à travers l'UIT et des missions de criticité élevée, OKTO Technologies vous propose des services de mesure et de contrôle de pointe.</p>
             <div class="sub-service">
               <ul class="modern-list">
@@ -96,23 +125,35 @@
                 <li>Sûreté de fonctionnement des réseaux (Qualité, Santé, Environnement)</li>
               </ul>
             </div>
+            <a href="#" class="card-more">
+              En savoir plus
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+            </a>
           </div>
 
           <div class="roadmap-visual">
-            <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=500&auto=format&fit=crop" alt="Antennes Télécoms" />
+            <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=400&auto=format&fit=crop" alt="Antennes Télécoms" loading="lazy" />
           </div>
         </div>
 
         <!-- ÉTAPE 03 -->
         <div class="roadmap-item">
           <div class="roadmap-marker">
-            <span class="roadmap-number">03</span>
-            <span class="roadmap-dot"></span>
+            <span class="roadmap-pin"></span>
           </div>
-          
+
           <div class="department-card">
-            <span class="card-tag">Pôle Innovation</span>
-            <h3>Études, Recherche & Innovation</h3>
+            <div class="card-header">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6" /><path d="M10 22h4" /><path d="M12 2a6 6 0 0 0-4 10.472V15h8v-2.528A6 6 0 0 0 12 2Z" />
+                </svg>
+              </div>
+              <div class="card-heading">
+                <span class="card-tag">Pôle Innovation</span>
+                <h3>Études, Recherche & Innovation</h3>
+              </div>
+            </div>
             <p>Spécialisée dans l'ingénierie de l'innovation, OKTO Technologies accompagne ses clients dans la réalisation de leurs objectifs de développement.</p>
             <div class="sub-service">
               <ul class="modern-list">
@@ -123,23 +164,35 @@
                 <li>Veille stratégique et benchmarks de bonnes pratiques</li>
               </ul>
             </div>
+            <a href="#" class="card-more">
+              En savoir plus
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+            </a>
           </div>
 
           <div class="roadmap-visual">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=500&auto=format&fit=crop" alt="Innovation Tech" />
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=400&auto=format&fit=crop" alt="Innovation Tech" loading="lazy" />
           </div>
         </div>
 
         <!-- ÉTAPE 04 -->
         <div class="roadmap-item">
           <div class="roadmap-marker">
-            <span class="roadmap-number">04</span>
-            <span class="roadmap-dot"></span>
+            <span class="roadmap-pin"></span>
           </div>
-          
+
           <div class="department-card">
-            <span class="card-tag">Pôle Académique</span>
-            <h3>Formation & Placement</h3>
+            <div class="card-header">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m22 10-10-5L2 10l10 5 10-5Z" /><path d="M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5" />
+                </svg>
+              </div>
+              <div class="card-heading">
+                <span class="card-tag">Pôle Académique</span>
+                <h3>Formation & Placement</h3>
+              </div>
+            </div>
             <p>Pour garantir un capital humain de haut niveau et accélérer le développement de nos États, OKTO Technologies a créé un Pôle Formation spécialisé.</p>
             <div class="sub-service">
               <h4>Management & Stratégies</h4>
@@ -157,10 +210,14 @@
                 <li>Ingénierie des réseaux 5G et IoT</li>
               </ul>
             </div>
+            <a href="#" class="card-more">
+              En savoir plus
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+            </a>
           </div>
 
           <div class="roadmap-visual">
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=500&auto=format&fit=crop" alt="Formation Tech" />
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=400&auto=format&fit=crop" alt="Formation Tech" loading="lazy" />
           </div>
         </div>
 
@@ -179,8 +236,8 @@
           <span>France</span>
         </div>
         <div class="country-item">
-          <img src="https://flagcdn.com/w80/ca.png" alt="Canada" />
-          <span>Canada</span>
+          <img src="https://flagcdn.com/w80/be.png" alt="Belgique" />
+          <span>Belgique</span>
         </div>
         <div class="country-item">
           <img src="https://flagcdn.com/w80/ma.png" alt="Maroc" />
@@ -196,6 +253,63 @@
         </div>
       </div>
       <a href="#" class="partners-btn">Voir tous nos partenaires</a>
+    </section>
+
+    <!-- ILS NOUS FONT CONFIANCE -->
+    <section class="trust-section reveal">
+      <div class="trust-header">
+        <div>
+          <span class="trust-eyebrow">Nos partenaires</span>
+          <h2>Ils nous font confiance</h2>
+        </div>
+        <div class="trust-nav">
+          <button class="trust-nav-btn" id="trustPrev" aria-label="Défiler vers la gauche">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
+          </button>
+          <button class="trust-nav-btn" id="trustNext" aria-label="Défiler vers la droite">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Logos issus de Wikimedia Commons (source libre). GS2E n'a pas de logo public disponible : à fournir manuellement. -->
+      <div class="trust-logos" id="trustLogos">
+        <div class="trust-logo-card">
+          <img class="trust-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Eurovision_logo.svg" alt="Eurovision" loading="lazy" />
+        </div>
+        <div class="trust-logo-card">
+          <img class="trust-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/BeIN_Sports_logo_(horizontal_version).svg" alt="beIN Sports" loading="lazy" />
+        </div>
+        <div class="trust-logo-card">
+          <img class="trust-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo-Radiodiffusion-television-ivoirienne.png" alt="RTI" loading="lazy" />
+        </div>
+        <div class="trust-logo-card">
+          <img class="trust-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/France_24_logo_(2013).svg" alt="France 24" loading="lazy" />
+        </div>
+        <div class="trust-logo-card">
+          <img class="trust-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lagard%C3%A8re_Sports.jpg" alt="Lagardère Sports" loading="lazy" />
+        </div>
+        <div class="trust-logo-card">
+          <img class="trust-logo-img" src="./assets/images/partners/logo-gs2e.png" alt="GS2E" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEAU CTA -->
+    <section class="cta-banner reveal">
+      <div class="cta-inner">
+        <div class="cta-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" /></svg>
+        </div>
+        <div class="cta-text">
+          <h3>Ensemble, construisons un avenir meilleur.</h3>
+          <p>Des talents unis, des départements engagés, des partenaires solides.</p>
+        </div>
+        <a href="contacts.html" class="cta-btn">
+          Nous rejoindre
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -231,6 +345,8 @@
 
     <!-- Scripts -->
     <script>
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+
       // --- Menu Burger ---
       const burger = document.getElementById('burger');
       const nav = document.getElementById('main-nav');
@@ -251,11 +367,20 @@
           if (entry.isIntersecting) {
             entry.target.classList.add('is-active');
           } else {
-            entry.target.classList.remove('is-active'); 
+            entry.target.classList.remove('is-active');
           }
         });
       }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
       roadmapItems.forEach(item => roadmapObserver.observe(item));
+
+      // --- Carrousel logos partenaires ---
+      const trustLogos = document.getElementById('trustLogos');
+      const trustPrev = document.getElementById('trustPrev');
+      const trustNext = document.getElementById('trustNext');
+      if (trustLogos && trustPrev && trustNext) {
+        trustPrev.addEventListener('click', () => trustLogos.scrollBy({ left: -220, behavior: 'smooth' }));
+        trustNext.addEventListener('click', () => trustLogos.scrollBy({ left: 220, behavior: 'smooth' }));
+      }
 
       // --- Effet Reveal standard (pour la section partenaire) ---
       const reveals = document.querySelectorAll('.reveal');
@@ -265,6 +390,74 @@
         });
       }, { threshold: 0.15 });
       reveals.forEach(el => revealObserver.observe(el));
+
+      // --- Route sinueuse (roadmap façon "chemin") ---
+      const roadmapEl = document.getElementById('roadmap');
+      const roadSvg = document.getElementById('roadmapRoad');
+
+      function drawRoad() {
+        if (!roadmapEl || !roadSvg) return;
+
+        // Sur mobile, on garde une ligne droite simple gérée en CSS
+        if (window.innerWidth <= 768) {
+          roadSvg.innerHTML = '';
+          return;
+        }
+
+        const items = roadmapEl.querySelectorAll('.roadmap-item');
+        if (items.length < 2) return;
+
+        const containerRect = roadmapEl.getBoundingClientRect();
+        const width = roadmapEl.offsetWidth;
+        const height = roadmapEl.offsetHeight;
+
+        roadSvg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        roadSvg.setAttribute('width', width);
+        roadSvg.setAttribute('height', height);
+
+        const points = [];
+        items.forEach((item) => {
+          const marker = item.querySelector('.roadmap-marker');
+          if (!marker) return;
+          const mRect = marker.getBoundingClientRect();
+          const x = mRect.left + mRect.width / 2 - containerRect.left;
+          const y = mRect.top + mRect.height / 2 - containerRect.top;
+          points.push({ x, y });
+        });
+
+        if (points.length < 2) return;
+
+        let d = `M ${points[0].x} ${Math.max(0, points[0].y - 70)} L ${points[0].x} ${points[0].y}`;
+        for (let i = 0; i < points.length - 1; i++) {
+          const p0 = points[i];
+          const p1 = points[i + 1];
+          const midY = (p0.y + p1.y) / 2;
+          d += ` C ${p0.x} ${midY}, ${p1.x} ${midY}, ${p1.x} ${p1.y}`;
+        }
+        const last = points[points.length - 1];
+        d += ` L ${last.x} ${Math.min(height, last.y + 70)}`;
+
+        roadSvg.innerHTML = `
+          <path d="${d}" fill="none" stroke="#e8eaf0" stroke-width="16" stroke-linecap="round" />
+          <path d="${d}" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 16" />
+        `;
+      }
+
+      let roadResizeFrame;
+      function scheduleDrawRoad() {
+        cancelAnimationFrame(roadResizeFrame);
+        roadResizeFrame = requestAnimationFrame(drawRoad);
+      }
+
+      window.addEventListener('load', drawRoad);
+      window.addEventListener('resize', scheduleDrawRoad);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(drawRoad);
+      }
+      if (roadmapEl && window.ResizeObserver) {
+        new ResizeObserver(scheduleDrawRoad).observe(roadmapEl);
+      }
+      drawRoad();
     </script>
   </body>
 </html>
