@@ -1,0 +1,274 @@
+/* ==========================================================================
+   OKTO Technologies — Styles page "Nos partenaires pays"
+   Réutilise la palette existante : #8B0000 / #FF4040 / #c0476b / #1a3fa0
+   ========================================================================== */
+
+.map-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 60px 40px;
+    text-align: center;
+}
+
+.map-hero .partners-title {
+    margin-bottom: 20px;
+}
+
+.map-hero-text {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    color: #5a5d6e;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.map-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.map-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-stat .stat-number {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #8B0000;
+    line-height: 1;
+}
+
+.map-stat .stat-label {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6b6f80;
+}
+
+/* ===== Conteneur de la carte ===== */
+.map-section {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 60px;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 640px;
+    background: #f7f8fb;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+#chartdiv {
+    width: 100%;
+    height: 100%;
+}
+
+.map-legend-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 24px;
+    font-size: 0.9rem;
+    color: #5a5d6e;
+}
+
+.map-legend-swatches span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.swatch-hq { background: #8B0000; }
+.swatch-partner { background: #c0476b; }
+.swatch-none { background: #e3e6ec; }
+
+/* ===== Tooltip personnalisé façon "carte pays" ===== */
+#country-tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    min-width: 220px;
+    max-width: 280px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    padding: 0 0 14px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(6px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    overflow: hidden;
+}
+
+#country-tooltip.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tooltip-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    background: linear-gradient(to right, #c2186e, #6a3fb5);
+    color: #fff;
+}
+
+.tooltip-flag {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.tooltip-country {
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.tooltip-hq-badge {
+    margin: 12px 16px 0;
+    display: inline-block;
+    background: #fdf1f1;
+    color: #8B0000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.tooltip-label {
+    margin: 14px 16px 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #a0a09f;
+}
+
+.tooltip-list {
+    margin: 0 16px;
+    padding-left: 18px;
+    color: #2b2d3a;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.tooltip-list .tooltip-empty {
+    list-style: none;
+    margin-left: -18px;
+    color: #9a9da8;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+/* ===== Liste accessible par région (sous la carte) ===== */
+.region-legend-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 60px 100px;
+}
+
+.region-legend-toggle {
+    display: block;
+    margin: 0 auto 30px;
+}
+
+#region-legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+.region-card {
+    background: #fdf1f1;
+    border: 1px solid #f3d9d9;
+    border-radius: 8px;
+    padding: 22px 24px;
+}
+
+.region-card h4 {
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8B0000;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8b6b6;
+}
+
+.region-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.region-card li {
+    font-size: 0.92rem;
+    color: #333;
+    padding: 5px 0;
+}
+
+.hq-tag {
+    display: inline-block;
+    margin-left: 6px;
+    background: #8B0000;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .map-hero,
+    .map-section,
+    .region-legend-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .map-wrapper {
+        height: 480px;
+    }
+}
+
+@media (max-width: 600px) {
+    .map-stats {
+        gap: 32px;
+    }
+
+    .map-stat .stat-number {
+        font-size: 1.9rem;
+    }
+
+    .map-wrapper {
+        height: 380px;
+    }
+
+    #country-tooltip {
+        max-width: 220px;
+        min-width: 190px;
+    }
+}

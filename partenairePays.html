@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos partenaires pays | OKTO Technologies</title>
+    <link rel="stylesheet" href="assets/css/okto.css" />
+    <link rel="stylesheet" href="assets/css/partenairepays.css" />
+    <link rel="shortcut icon" href="assets/icons/android-chrome-192x192.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Barre du haut -->
+    <div class="top-bar"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+      <div class="logo">
+        <span class="logo-ok">OK</span><span class="logo-to">TO</span>
+        <small>TECHNOLOGIES</small>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services.html">Nos services</a>
+        <a href="#">Notre équipe</a>
+        <a href="partenaires-pays.html" class="active">Partenaires</a>
+        <a href="actu.html">Infos et actus</a>
+        <a href="contacts.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="map-hero reveal">
+      <h2 class="partners-title">
+        <span class="title-dark">NOS</span>
+        <span class="title-accent">PARTENAIRES PAYS</span>
+      </h2>
+      <p class="map-hero-text">
+        Basée à Abidjan, OKTO Technologies déploie son expertise bien au-delà
+        de la Côte d'Ivoire. Survolez la carte pour découvrir nos
+        partenaires dans chaque pays où nous intervenons.
+      </p>
+      <div class="map-stats">
+        <div class="map-stat">
+          <span class="stat-number" id="stat-countries">–</span>
+          <span class="stat-label">Pays</span>
+        </div>
+        <div class="map-stat">
+          <span class="stat-number" id="stat-regions">–</span>
+          <span class="stat-label">Régions</span>
+        </div>
+        <div class="map-stat">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Siège social</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carte interactive -->
+    <section class="map-section reveal">
+      <div class="map-wrapper">
+        <div id="chartdiv"></div>
+        <div id="country-tooltip"></div>
+      </div>
+      <div class="map-legend-swatches">
+        <span><i class="swatch swatch-hq"></i> Siège social (Côte d'Ivoire)</span>
+        <span><i class="swatch swatch-partner"></i> Pays partenaire</span>
+        <span><i class="swatch swatch-none"></i> Autres pays</span>
+      </div>
+    </section>
+
+    <!-- Liste accessible par région -->
+    <section class="region-legend-section reveal">
+      <button class="team-btn region-legend-toggle" id="region-legend-toggle">
+        Voir la liste complète des pays
+      </button>
+      <div id="region-legend" hidden></div>
+    </section>
+
+    <!-- Section CTA -->
+    <section class="cta-section reveal">
+      <div class="cta-text">
+        <h2 class="cta-title">Vous êtes basé dans l'un de ces pays ?</h2>
+        <p class="cta-subtitle">
+          Contactez-nous pour découvrir comment collaborer avec OKTO Technologies.
+        </p>
+      </div>
+      <a href="contacts.html" class="btn btn-start cta-btn">Nous contacter</a>
+    </section>
+
+    <!-- Footer -->
+    <section class="site-footer">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3 class="footer-title">Qui sommes-nous ?</h3>
+          <p class="footer-text">
+            OKTO Technologies est une entreprise créée par des Ingénieurs
+            ivoiriens chevronnés dans le domaine des Technologies de
+            l'Audiovisuel et des Télécommunications.
+          </p>
+          <p class="footer-text">
+            Établie en Côte d'Ivoire sous le numéro RCCM CI-ABJ-2017-B-19296,
+            avec un capital de 5 000 000 FCFA, OKTO Technologies vient répondre
+            aux besoins grandissants d'une expertise locale et de plateaux
+            techniques pour les Études, la Télévision en Direct, l'accès
+            universel aux services des Télécommunications et les
+            Télécommunications d'Urgence.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Nos services</h3>
+          <p class="footer-text">
+            <strong>Le Direct Par Satellite :</strong> Retransmission Vidéo -
+            News - Sport - Conférence - Débats - Divertissement - Concert -
+            Meeting
+          </p>
+          <p class="footer-text">
+            <strong>Les Télécommunications :</strong> Télécommunications
+            d'urgence et accès Universel - Accès Internet Occasionnel et
+            temporel
+          </p>
+          <p class="footer-text">
+            <strong>Les Contrôles et mesures :</strong> Contrôles du spectre et
+            des systèmes Radioélectriques - Interférométrie
+          </p>
+          <p class="footer-text">
+            <strong>Les Études &amp; Formations :</strong> Études Stratégiques -
+            Études Techniques - Études Économiques
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Nous joindre</h3>
+          <form class="footer-form">
+            <input type="text" name="name" placeholder="Name" class="footer-input" />
+            <input type="email" name="email" placeholder="E-mail" class="footer-input" />
+            <textarea name="message" placeholder="Message" class="footer-textarea"></textarea>
+            <button type="submit" class="footer-submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        Tous les droits réservés &copy; <span id="footer-year"></span> - OKTO Technologies.
+      </div>
+    </section>
+
+    <!-- Bouton retour en haut -->
+    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+
+    <!-- amCharts 5 : librairie carte -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <!-- Scripts JS internes -->
+    <script src="assets/js/okto.js"></script>
+    <script src="assets/js/mapShadcn.js"></script>
+
+    <script>
+      // --- Année du footer ---
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+      // --- Menu Burger ---
+      const burger = document.getElementById('burger');
+      const nav = document.getElementById('main-nav');
+
+      burger.addEventListener('click', () => {
+        nav.classList.toggle('is-open');
+        burger.classList.toggle('is-open');
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('is-open');
+          burger.classList.remove('is-open');
+        });
+      });
+
+      // --- Bouton Retour en haut ---
+      const scrollTopBtn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add('is-visible');
+        } else {
+          scrollTopBtn.classList.remove('is-visible');
+        }
+      });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // --- Effet Reveal ---
+      document.addEventListener('DOMContentLoaded', () => {
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        reveals.forEach(el => observer.observe(el));
+      });
+
+      // --- Toggle liste des pays par région ---
+      const legendToggle = document.getElementById('region-legend-toggle');
+      const legendBlock = document.getElementById('region-legend');
+      legendToggle.addEventListener('click', () => {
+        const isHidden = legendBlock.hasAttribute('hidden');
+        if (isHidden) {
+          legendBlock.removeAttribute('hidden');
+          legendToggle.textContent = 'Masquer la liste';
+        } else {
+          legendBlock.setAttribute('hidden', '');
+          legendToggle.textContent = 'Voir la liste complète des pays';
+        }
+      });
+    </script>
+  </body>
+</html>
