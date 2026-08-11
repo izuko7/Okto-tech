@@ -62,7 +62,7 @@
     position: relative;
     width: 100%;
     height: 640px;
-    background: #f7f8fb;
+    background: #f7f2e9;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     overflow: hidden;
@@ -71,6 +71,129 @@
 #chartdiv {
     width: 100%;
     height: 100%;
+}
+
+/* ===== Bascule Globe / Carte ===== */
+.globe-toggle {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #6b6f80;
+    user-select: none;
+}
+
+.toggle-label.is-active {
+    color: #8B0000;
+    font-weight: 700;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #c0476b;
+    border-radius: 22px;
+    transition: background 0.25s ease;
+}
+
+.switch .slider::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.switch input:checked + .slider {
+    background: #8B0000;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+/* ===== Boutons Home / Zoom (façon carte vintage) ===== */
+.map-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.map-control-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    background: #c0476b;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.map-control-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.map-control-btn:hover {
+    background: #8B0000;
+    transform: translateY(-1px);
+}
+
+/* ===== Titre sous le globe ===== */
+.globe-caption {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+    pointer-events: none;
+}
+
+.globe-caption h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2b2d3a;
+    margin-bottom: 4px;
+}
+
+.globe-caption p {
+    font-size: 0.9rem;
+    color: #8a8368;
 }
 
 .map-legend-swatches {
@@ -98,7 +221,7 @@
 
 .swatch-hq { background: #8B0000; }
 .swatch-partner { background: #c0476b; }
-.swatch-none { background: #e3e6ec; }
+.swatch-none { background: #d9cdb0; }
 
 /* ===== Tooltip personnalisé façon "carte pays" ===== */
 #country-tooltip {

@@ -67,8 +67,33 @@
     <!-- Carte interactive -->
     <section class="map-section reveal">
       <div class="map-wrapper">
+        <!-- Bascule Globe / Carte -->
+        <div class="globe-toggle">
+          <span class="toggle-label is-active" id="label-globe">Globe</span>
+          <label class="switch">
+            <input type="checkbox" id="view-toggle" />
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label" id="label-map">Carte</span>
+        </div>
+
+        <!-- Boutons Home / Zoom -->
+        <div class="map-controls">
+          <button class="map-control-btn" id="btn-home" aria-label="Recentrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/><path d="M5 10v10a1 1 0 0 0 1 1h3m10-11v10a1 1 0 0 1-1 1h-3"/></svg>
+          </button>
+          <button class="map-control-btn" id="btn-zoom-in" aria-label="Zoomer">+</button>
+          <button class="map-control-btn" id="btn-zoom-out" aria-label="Dézoomer">–</button>
+        </div>
+
         <div id="chartdiv"></div>
         <div id="country-tooltip"></div>
+
+        <!-- Titre sous le globe -->
+        <div class="globe-caption">
+          <h3>OKTO à travers le monde</h3>
+          <p><span id="stat-countries-inline">–</span> pays partenaires sur <span id="stat-regions-inline">–</span> régions</p>
+        </div>
       </div>
       <div class="map-legend-swatches">
         <span><i class="swatch swatch-hq"></i> Siège social (Côte d'Ivoire)</span>
