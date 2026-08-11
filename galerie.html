@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/galerie.css" />
+    <link rel="shortcut icon" href="assets/icons/android-chrome-192x192.png" type="image/x-icon" />
+    <title>Notre Galerie - OKTO Technologies</title>
+  </head>
+  <body>
+    <!-- Barre de navigation -->
+    <div class="top-bar"></div>
+
+    <header>
+      <div class="logo">
+        <span class="logo-ok">OK</span><span class="logo-to">TO</span>
+        <small>TECHNOLOGIES</small>
+      </div>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services.html">Nos services</a>
+        <a href="team.html">Notre équipe</a>
+        <a href="actu.html">Infos et actus</a>
+        <a href="contacts.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section Galerie -->
+    <section class="gallery-hero">
+      <h1>NOTRE <span class="title-accent">GALERIE</span></h1>
+      <p>Découvrez nos installations, nos équipes en action et nos projets à travers l'Afrique et l'Europe.</p>
+    </section>
+
+    <!-- Grille Galerie (Photos pures) -->
+    <section class="main-gallery-section">
+      <div class="gallery-grid">
+        
+        <!-- REMPLACE LES SRC PAR TES VRAIES IMAGES -->
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop" alt="Salle de serveurs">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://www.okto.ci/assets/images/gallery/20171109_121943.jpg" alt="Camion de tramsision">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" alt="Réunion d'équipe">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop" alt="Développement">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800&auto=format&fit=crop" alt="Data center">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop" alt="Studio broadcast">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop" alt="Partenariat">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="Technologie globale">
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=800&auto=format&fit=crop" alt="Antennes">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="site-footer">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3 class="footer-title">Qui sommes-nous ?</h3>
+          <p class="footer-text">OKTO Technologies est une entreprise créée par des Ingénieurs ivoiriens chevronnés dans le domaine des Technologies de l'Audiovisuel et des Télécommunications.</p>
+          <p class="footer-text">Établie en Côte d'Ivoire sous le numéro RCCM CI-ABJ-2017-B-19296...</p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-title">Nos services</h3>
+          <p class="footer-text"><strong>Le Direct Par Satellite :</strong> Retransmission Vidéo - News - Sport...</p>
+          <p class="footer-text"><strong>Les Télécommunications :</strong> Télécommunications d'urgence...</p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-title">Nous joindre</h3>
+          <form class="footer-form">
+            <input type="text" name="name" placeholder="Name" class="footer-input" />
+            <input type="email" name="email" placeholder="E-mail" class="footer-input" />
+            <textarea name="message" placeholder="Message" class="footer-textarea"></textarea>
+            <button type="submit" class="footer-submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">Tous les droits réservés &copy; <span id="footer-year"></span> - OKTO Technologies.</div>
+    </section>
+
+    <!-- Structure Lightbox (Fenêtre plein écran) -->
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox">&times;</span>
+      <button class="prev-lightbox">&#10094;</button>
+      <img src="" id="lightbox-img" class="lightbox-content" alt="Image en grand format">
+      <button class="next-lightbox">&#10095;</button>
+    </div>
+
+    <!-- Bouton retour en haut -->
+    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15" /></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+      // --- Menu Burger ---
+      const burger = document.getElementById('burger');
+      const nav = document.getElementById('main-nav');
+      burger.addEventListener('click', () => { nav.classList.toggle('is-open'); burger.classList.toggle('is-open'); });
+      nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { nav.classList.remove('is-open'); burger.classList.remove('is-open'); }); });
+
+      // --- Bouton Retour en haut ---
+      const scrollTopBtn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) { scrollTopBtn.classList.add('is-visible'); } else { scrollTopBtn.classList.remove('is-visible'); }
+      });
+      scrollTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+      // --- Effet Reveal ---
+      document.addEventListener('DOMContentLoaded', () => {
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+      });
+
+      // --- Lightbox Galerie ---
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('.close-lightbox');
+      const prevBtn = document.querySelector('.prev-lightbox');
+      const nextBtn = document.querySelector('.next-lightbox');
+      let currentImageIndex = 0;
+      const galleryImages = Array.from(galleryItems);
+
+      // Ouvrir au clic
+      galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          lightbox.classList.add('is-open');
+          currentImageIndex = index;
+          lightboxImg.src = item.querySelector('img').src;
+        });
+      });
+
+      function closeLightbox() { lightbox.classList.remove('is-open'); }
+      function showNext() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentImageIndex].querySelector('img').src;
+      }
+      function showPrev() {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentImageIndex].querySelector('img').src;
+      }
+
+      closeBtn.addEventListener('click', closeLightbox);
+      nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+      prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+
+      // Fermer si on clique en dehors de l'image
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) { closeLightbox(); }
+      });
+
+      // Navigation au clavier
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+      });
+    </script>
+  </body>
+</html>
